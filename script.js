@@ -7,7 +7,7 @@ let storedCities = [];
 
 function renderCities() {
     // Clear element and update todoCountSpan
-    storedCities.innerHTML = "";
+    citiesList.innerHTML = "";
 
     // Render a new li for each city
     for (var i = 0; i < storedCities.length; i++) {
