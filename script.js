@@ -2,6 +2,10 @@ let citiesList = document.querySelector(".list-group");
 let cityInput = document.querySelector(".form-input");
 let storedCities = [];
 let firstDayTime = document.querySelector(".first-day-time");
+let firstDayIcon = document.querySelector(".first-day-icon");
+let firstDayTemp = document.querySelector(".first-day-temp");
+let firstDayWin = document.querySelector(".first-day-win");
+let firstDayHum = document.querySelector(".first-day-hum");
 
 // let chosenCity = document.querySelector(".form-input").value;
 
@@ -73,6 +77,8 @@ buttonsDiv.addEventListener("click", event => {
             
             console.log(data);
             firstDayTime.innerHTML = moment(data.list[0].dt, "X").format("DD/MM/YYYY");
+            firstDayTemp.innerHTML = "Temp: " + data.list[0].main.temp + "K";
+            firstDayWin.innerHTML = data.list[0].wind.speed;
             
         })
         
