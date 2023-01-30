@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <title>Weather Dashboard</title>
 </head>
 
@@ -36,7 +38,16 @@
             </div>
           </div>
         </form>
-        <div class="list-group" id="history"></div>
+        <div class="list-group" id="history">
+          <div class="btn-group-vertical">
+            <button type="button" id = "btn1" class="btn btn-lg btn-primary btn-Berlin">Berlin</button>
+            <button type="button" id = "btn2" class="btn btn-lg btn-primary btn-Paris">Paris</button>
+            <button type="button" id = "btn3" class="btn btn-lg btn-primary btn-Edinburgh">Edinburgh</button>
+            <button type="button" id = "btn4" class="btn btn-lg btn-primary btn-Madrid">Madrid</button>
+            <button type="button" id = "btn5" class="btn btn-lg btn-primary btn-Birmingham">Birmingham</button>
+            <button type="button" id = "btn6" class="btn btn-lg btn-primary btn-London">London</button>
+          </div>
+        </div>
       </aside>
 
       <div class="col-lg-9 pb-3">
@@ -109,7 +120,7 @@
             </ul>
           </div>
         </section>
-          
+
       </div>
     </div>
   </div>
