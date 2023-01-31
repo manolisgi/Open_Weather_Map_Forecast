@@ -114,7 +114,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = "Berlin     " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
@@ -159,7 +159,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = "Paris    " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
@@ -204,7 +204,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = "Edinburgh    " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
@@ -247,7 +247,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = "Madrid     " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
@@ -290,7 +290,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = "Birmingham    " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
@@ -333,7 +333,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = "London    " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
