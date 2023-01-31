@@ -34,42 +34,9 @@ let todayTime = document.querySelector(".today-time");
 
 
 
-
-// let chosenCity = document.querySelector(".form-input").value;
-
-
-
-// function renderCities() {
-//     // Clear element and update todoCountSpan
-//     citiesList.innerHTML = "";
-
-//     // Render a new li for each city
-//     for (var i = 0; i < storedCities.length; i++) {
-//         // create a variable that stores the "current" todo
-//         var city = storedCities[i];
-
-//         // create a li element (list item) that we will append to our list later
-//         var button = document.createElement("button"); // <li></li>
-
-//         // set the text of the list item to be the value of todo
-//         button.textContent = city;   // <li>Teach  HTML</li>
-
-//         // add class to the button
-//         button.className = "buttonCity";
-
-//         // make this the last child of the todoList, which is the <ul> on our page
-
-//         citiesList.appendChild(button);
-//     }
-// }
-
-
 function init() {
     var cityToStore = JSON.parse(localStorage.getItem(`city`));
     storedCities = cityToStore;
-
-
-    //   renderCities()
 }
 
 function storeCities() {
@@ -108,13 +75,10 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(citiesFound => {
                 let firstCity = citiesFound[0];
-
                 console.log(firstCity.lat);
                 console.log(firstCity.lon);
-
                 return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=cba5837e4c2716904395e63c014ee26b`)
             })
-
 
             .then(response => response.json())
             .then(data => {
@@ -147,14 +111,14 @@ buttonsDiv.addEventListener("click", event => {
     }
     else if (event.target.id == 'btn1') {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=cba5837e4c2716904395e63c014ee26b")
-        .then(response => response.json())
-        .then(todayData => {
-            console.log(todayData);
-            todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
-            todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
-            todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
-            todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
-        })
+            .then(response => response.json())
+            .then(todayData => {
+                console.log(todayData);
+                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
+                todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
+                todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
+            })
         fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + Berlin + "&limit=5&appid=cba5837e4c2716904395e63c014ee26b")
             .then(response => response.json())
             .then(citiesFound => {
@@ -192,14 +156,14 @@ buttonsDiv.addEventListener("click", event => {
     }
     else if (event.target.id == 'btn2') {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=cba5837e4c2716904395e63c014ee26b")
-        .then(response => response.json())
-        .then(todayData => {
-            console.log(todayData);
-            todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
-            todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
-            todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
-            todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
-        })
+            .then(response => response.json())
+            .then(todayData => {
+                console.log(todayData);
+                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
+                todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
+                todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
+            })
         fetch("http://api.openweathermap.org/geo/1.0/direct?q=Paris&limit=5&appid=cba5837e4c2716904395e63c014ee26b")
             .then(response => response.json())
             .then(citiesFound => {
@@ -237,14 +201,14 @@ buttonsDiv.addEventListener("click", event => {
     }
     else if (event.target.id == 'btn3') {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=Edinburgh&appid=cba5837e4c2716904395e63c014ee26b")
-        .then(response => response.json())
-        .then(todayData => {
-            console.log(todayData);
-            todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
-            todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
-            todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
-            todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
-        })
+            .then(response => response.json())
+            .then(todayData => {
+                console.log(todayData);
+                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
+                todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
+                todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
+            })
         fetch("http://api.openweathermap.org/geo/1.0/direct?q=Edinburgh&limit=5&appid=cba5837e4c2716904395e63c014ee26b")
             .then(response => response.json())
             .then(citiesFound => {
@@ -280,14 +244,14 @@ buttonsDiv.addEventListener("click", event => {
     }
     else if (event.target.id == 'btn4') {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=cba5837e4c2716904395e63c014ee26b")
-        .then(response => response.json())
-        .then(todayData => {
-            console.log(todayData);
-            todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
-            todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
-            todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
-            todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
-        })
+            .then(response => response.json())
+            .then(todayData => {
+                console.log(todayData);
+                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
+                todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
+                todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
+            })
         fetch("http://api.openweathermap.org/geo/1.0/direct?q=Madrid&limit=5&appid=cba5837e4c2716904395e63c014ee26b")
             .then(response => response.json())
             .then(citiesFound => {
@@ -323,14 +287,14 @@ buttonsDiv.addEventListener("click", event => {
     }
     else if (event.target.id == 'btn5') {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=Birmingham&appid=cba5837e4c2716904395e63c014ee26b")
-        .then(response => response.json())
-        .then(todayData => {
-            console.log(todayData);
-            todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
-            todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
-            todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
-            todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
-        })
+            .then(response => response.json())
+            .then(todayData => {
+                console.log(todayData);
+                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
+                todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
+                todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
+            })
         fetch("http://api.openweathermap.org/geo/1.0/direct?q=Birmingham&limit=5&appid=cba5837e4c2716904395e63c014ee26b")
             .then(response => response.json())
             .then(citiesFound => {
@@ -366,14 +330,14 @@ buttonsDiv.addEventListener("click", event => {
     }
     else if (event.target.id == 'btn6') {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=London&appid=cba5837e4c2716904395e63c014ee26b")
-        .then(response => response.json())
-        .then(todayData => {
-            console.log(todayData);
-            todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
-            todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
-            todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
-            todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
-        })
+            .then(response => response.json())
+            .then(todayData => {
+                console.log(todayData);
+                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
+                todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
+                todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
+            })
         fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=cba5837e4c2716904395e63c014ee26b")
             .then(response => response.json())
             .then(citiesFound => {
@@ -407,9 +371,7 @@ buttonsDiv.addEventListener("click", event => {
                 fifthDayHum.innerHTML = "Humidity " + data.list[38].main.humidity; + " %"
             })
     }
-    // cityInput.value = "";
 
-    // storeCities();
 
 });
 
