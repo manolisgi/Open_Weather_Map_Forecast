@@ -64,7 +64,7 @@ buttonsDiv.addEventListener("click", event => {
             .then(response => response.json())
             .then(todayData => {
                 console.log(todayData);
-                todayTime.innerHTML = moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
+                todayTime.innerHTML = document.querySelector(".weather-search").value + "     " + moment(todayData.dt, "X").format("DD/MM/YYYY HH:mm:ss");
                 todayTemp.innerHTML = "Temp: " + todayData.main.temp + "K";
                 todayWin.innerHTML = "Wind: " + todayData.wind.speed + " KPH";
                 todayHum.innerHTML = "Humidity: " + todayData.main.humidity; + " %"
